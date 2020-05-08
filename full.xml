@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <EMPLOYEE ID="1"	NAME="SAHER"			SALARY="20000"	SSN="11111"	/>
+    <EMPLOYEE ID="2"	NAME="YAHER"			SALARY="23000"	SSN="11112"	/>
+
+</dataset>

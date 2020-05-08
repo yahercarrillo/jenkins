@@ -1,0 +1,80 @@
+<settings>
+
+    <profiles>
+        <profile>
+            <id>envConfig-DE</id>
+            <activation>
+                <property>
+                    <name>env</name>
+                    <value>DE</value>
+                </property>
+            </activation>
+            <properties>
+                <var.env>DE</var.env>
+                <var.version>1.0</var.version>
+                <var.version.update>false</var.version.update>
+                <var.nameArtifact>testng</var.nameArtifact>
+                <var.java_ver>1.8</var.java_ver>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>envConfig-CA</id>
+            <activation>
+                <property>
+                    <name>env</name>
+                    <value>CA</value>
+                </property>
+            </activation>
+            <properties>
+                <var.env>CA</var.env>
+                <var.version>1.0</var.version>
+                <var.version.update>false</var.version.update>
+                <var.nameArtifact>testng</var.nameArtifact>
+                <var.java_ver>1.8</var.java_ver>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>envConfig-PROD</id>
+            <activation>
+                <property>
+                    <name>env</name>
+                    <value>PROD</value>
+                </property>
+            </activation>
+            <properties>
+                <var.env>PROD</var.env>
+                <var.version>1.0</var.version>
+                <var.version.update>false</var.version.update>
+                <var.nameArtifact>testng</var.nameArtifact>
+                <var.java_ver>1.8</var.java_ver>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <sonar.host.url>http://192.168.0.13:9000</sonar.host.url>
+                <sonar.verbose>false</sonar.verbose>
+                <sonar.showProfiling>true</sonar.showProfiling>
+                <sonar.java.codeCoveragePlugin>jacoco</sonar.java.codeCoveragePlugin>
+                <sonar.exclusions>
+                    **/resources/**,
+                    **co/bancodebogota/definitions/auto/testng/dao/*,
+                    **co/bancodebogota/definitions/auto/testng/exceptions/*,
+                    **co/bancodebogota/definitions/auto/testng/models/*
+                </sonar.exclusions>
+            </properties>
+        </profile>
+
+    </profiles>
+
+    <activeProfiles>
+        <activeProfile>envConfig-DE</activeProfile>
+    </activeProfiles>
+
+</settings>
